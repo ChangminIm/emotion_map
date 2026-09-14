@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>안드로이드 설치·사용 — 공주를 걷다</title>
+<link rel="icon" type="image/png" href="./icon.png">
+<style>
+:root{--navy:#0B2D4A;--navy-dark:#061A2E;--blue:#4A90E2;--ink:#1B2733;--muted:#6B7683;--bg:#F5F7FA;--card:#fff;--border:#E3E8EE}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"Apple SD Gothic Neo","Segoe UI","Malgun Gothic","Noto Sans KR",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit}
+.hero{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,#164a78 100%);color:#fff;padding:30px 24px 36px;text-align:center}
+.hero .nav{max-width:860px;margin:0 auto 18px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.hero .nav a{font-size:13.5px;font-weight:600;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:8px 16px;border-radius:9px;text-decoration:none}
+.hero h1{font-size:25px;font-weight:800;margin-bottom:6px}
+.hero .subtitle{font-size:13.5px;opacity:.92}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px 40px}
+.section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:26px 28px;margin-top:22px}
+.section h2{font-size:18.5px;font-weight:800;color:var(--navy);margin-bottom:14px}
+.section h3{font-size:15.5px;font-weight:700;margin:16px 0 8px}
+.section p,.section li{font-size:14.5px}
+.muted{color:var(--muted);font-size:13.5px}
+ol,ul{padding-left:22px;display:flex;flex-direction:column;gap:7px}
+.callout{background:#EEF4FB;border:1px solid #D6E2F2;border-radius:10px;padding:12px 16px;font-size:13.5px;color:var(--navy);margin:12px 0}
+.callout.warn{background:#fff7e8;border-color:#f3e2b8;color:#8a6116}
+table{width:100%;border-collapse:collapse;margin:8px 0;font-size:14px}
+th,td{border:1px solid var(--border);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:#EEF2F8;color:var(--navy);white-space:nowrap}
+.kbd{display:inline-block;background:#EEF2F6;border:1px solid var(--border);border-radius:6px;padding:1px 8px;font-size:13px;font-weight:600;color:var(--navy)}
+.faq .q{font-weight:700;margin-top:12px}
+.faq .a{color:var(--muted);font-size:14px;margin-top:2px}
+footer{text-align:center;color:var(--muted);font-size:12.5px;padding:26px 24px 40px;border-top:1px solid var(--border);margin-top:36px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="nav">
+    <a href="./index.html">← 홈으로</a>
+    <a href="./공주를걷다_v0.7.0.apk" download>⬇ APK 다운로드</a>
+    <a href="./manual_ios.html">🍎 아이폰은 여기</a>
+  </div>
+  <h1>🤖 안드로이드 설치·사용</h1>
+  <div class="subtitle">공주를 걷다 v0.7.0 (2026.09.14) · 안드로이드 8.0 이상</div>
+</div>
+
+<div class="wrap">
+
+  <div class="section">
+    <h2>1️⃣ 설치하기 <span class="muted">(처음 1회 · 3분 · 답사 전날까지)</span></h2>
+    <h3>방법 A. 휴대폰에서 바로 받기</h3>
+    <ol>
+      <li>휴대폰 인터넷(삼성 인터넷·크롬)으로 이 페이지에 접속합니다.</li>
+      <li>위쪽 <span class="kbd">⬇ APK 다운로드</span>를 눌러 내려받습니다.</li>
+      <li>다운로드 알림(또는 <b>내 파일 → 다운로드</b>)에서 파일을 누릅니다.</li>
+    </ol>
+    <h3>방법 B. 컴퓨터에서 받아 카카오톡으로 보내기</h3>
+    <ol>
+      <li>컴퓨터에서 APK를 받아 <b>카카오톡 "나에게 보내기"</b>로 보냅니다.</li>
+      <li>휴대폰 카카오톡에서 파일을 눌러 <b>저장</b> 후 엽니다.</li>
+    </ol>
+    <h3>공통 — 설치 마무리</h3>
+    <ol>
+      <li>"출처를 알 수 없는 앱" 경고 → <b>설정</b> → <b>"이 출처 허용"</b> 켜기 → 뒤로 → 다시 파일을 눌러 <b>설치</b>.</li>
+      <li>"안전하지 않은 앱 차단됨" 경고 → <b>"자세히"</b> → <b>"무시하고 설치"</b>.</li>
+      <li>Google Play Protect가 "검사에 보낼까요?" → <b>"보내지 않고 설치"</b>.</li>
+      <li>홈 화면에 「공주를 걷다」 아이콘이 생기면 완료입니다.</li>
+    </ol>
+    <div class="callout">💡 위 경고는 Play 스토어 밖에서 설치하는 모든 앱에 공통으로 뜹니다. 이 홈페이지나 멘토가 보낸 파일만 설치해 주세요.</div>
+  </div>
+
+  <div class="section">
+    <h2>2️⃣ 처음 실행</h2>
+    <table>
+      <tr><th>화면</th><th>할 일</th></tr>
+      <tr><td>시작 화면</td><td><b>시작하기</b></td></tr>
+      <tr><td>참가자 정보</td><td><b>조</b> · <b>조원 번호</b>(멘토가 알려 줌) · <b>이름</b>을 한 번만 입력. 이후 기록 번호가 <b>G3-5-0001</b>처럼 붙어 30명의 기록이 섞이지 않습니다</td></tr>
+      <tr><td>위치 권한</td><td><b>앱 사용 중에만 허용</b> · "정확한 위치" 켜짐 확인</td></tr>
+      <tr><td>카메라 권한</td><td><b>허용</b> (사진을 찍을 때만)</td></tr>
+    </table>
+    <div class="callout">🗺 <b>답사 전에 지도 화면을 한 번 열어 두세요.</b> 한 번 본 지역의 배경 지도는 30일 동안 폰에 남아, 현장에서 통신이 나빠도 그대로 보입니다. 기록 자체는 인터넷이 없어도 됩니다.</div>
+  </div>
+
+  <div class="section">
+    <h2>3️⃣ 야간 답사에서</h2>
+    <table>
+      <tr><th>언제</th><th>무엇을</th></tr>
+      <tr><td>감정이 드는 곳에서</td><td><b>지도</b> 탭 → 아래 <b>좋음 / 나쁨 / 보통 / 궁금</b> 중 하나를 누름 → (메모·5점·사진은 선택) → <b>저장</b></td></tr>
+      <tr><td>이동 중</td><td>아무것도 안 해도 됩니다</td></tr>
+      <tr><td>숙소 도착 후</td><td><b>기록</b> 탭 → <b>보내기</b> → 조별 방(카카오톡·드라이브)에 올리기. 그리고 <b>폰에 저장</b>으로 사본 하나 더</td></tr>
+    </table>
+    <div class="callout warn">⚠ <b>보내기 전까지 기록은 이 폰 안에만 있습니다.</b> 폰을 잃거나 앱을 지우면 사라집니다. 숙소에 도착하면 바로 보내 주세요. 아직 안 보낸 기록이 있으면 홈 화면에 노란 띠로 알려 줍니다.</div>
+    <div class="callout">🔋 저녁 식사 때 <b>충전</b>해 두세요. 야간 답사 90분 동안 화면을 자주 켭니다.</div>
+    <div class="callout">📸 사진은 <b>선택</b>입니다. 찍을 때는 사람 얼굴·차량 번호판이 안 들어가게 장소 위주로.</div>
+  </div>
+
+  <div class="section faq">
+    <h2>❓ 자주 묻는 질문</h2>
+    <div class="q">Q. 위치가 안 잡혀요.</div>
+    <div class="a">성곽 위나 트인 곳에서 몇 초 기다리면 잡힙니다. 화면 위 정확도(m)가 20m 아래로 내려오면 좋습니다. 골목에서는 정확도가 떨어져도 저장됩니다 — 분석 때 정확도 값으로 거릅니다.</div>
+    <div class="q">Q. 낮에 실수로 기록했어요.</div>
+    <div class="a">괜찮습니다. 기록 시각이 남아 있어 2일차에 주간/야간을 시각으로 구분합니다. 지우고 싶으면 기록 탭에서 ⋮ → 삭제.</div>
+    <div class="q">Q. 태그를 잘못 골랐어요.</div>
+    <div class="a">기록 탭에서 해당 기록을 누르면 태그·메모를 고칠 수 있습니다. 위치와 시각은 바꿀 수 없습니다.</div>
+    <div class="q">Q. 같은 곳을 조원끼리 여러 명이 기록해도 되나요?</div>
+    <div class="a">네, 오히려 그래야 합니다. 각자의 감정이 데이터입니다.</div>
+    <div class="q">Q. 보내기를 누르면 화질을 물어봐요.</div>
+    <div class="a"><b>원본 그대로</b>가 기본입니다. 사진이 많아 카톡이 느리면 <b>보통</b>으로.</div>
+    <div class="q">Q. 리빙랩 「행복마을 만들기」 앱이 이미 깔려 있어요.</div>
+    <div class="a">다른 앱이라 같이 설치되고 자료도 따로입니다.</div>
+  </div>
+
+</div>
+
+<footer>
+  인문사회 융합인재양성사업(HUSS) · 공주대학교 지리학과 × 사학과 공동 비교과<br>
+  MADE BY 임창민 · 국립공주대학교 지리학과
+</footer>
+
+</body>
+</html>
