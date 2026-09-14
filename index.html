@@ -59,6 +59,11 @@ a{color:inherit}
 .qr{display:flex;gap:16px;justify-content:center;margin-top:8px}
 .qr img{width:110px;height:110px;border:1px solid var(--border);border-radius:10px;background:#fff}
 
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px;margin-bottom:8px}
+.shot{text-align:center}
+.shot .frame{display:inline-block;background:#111;border-radius:26px;padding:7px;box-shadow:0 14px 32px rgba(11,45,74,.18)}
+.shot img{display:block;width:100%;max-width:200px;border-radius:20px}
+.shot .cap{font-size:13px;color:var(--muted);margin-top:10px;font-weight:600}
 .tags{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:8px}
 .tag{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 18px 16px;display:flex;gap:12px;align-items:flex-start}
 .tag .dot{width:40px;height:40px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff}
@@ -125,6 +130,17 @@ footer .credit{margin-top:8px;font-weight:700;color:var(--navy)}
       <div class="meta"><b>v0.7.0</b> · iOS 13 이상 · App Store에서 <b>TestFlight</b>를 먼저 설치하세요</div>
     </div>
   </div>
+
+  <div class="section-title">📱 앱 화면</div>
+  <div class="shots">
+    <div class="shot"><div class="frame"><img src="./shot_start.jpg" alt="시작 화면"></div><div class="cap">시작</div></div>
+    <div class="shot"><div class="frame"><img src="./shot_home.jpg" alt="홈 화면"></div><div class="cap">홈</div></div>
+    <div class="shot"><div class="frame"><img src="./shot_map.jpg" alt="지도에서 감정 기록"></div><div class="cap">지도에서 감정 선택</div></div>
+    <div class="shot"><div class="frame"><img src="./shot_capture.jpg" alt="기록 화면"></div><div class="cap">태그 · 메모 · 사진 · 5점</div></div>
+    <div class="shot"><div class="frame"><img src="./shot_records.jpg" alt="내 기록"></div><div class="cap">내 기록 · 보내기</div></div>
+    <div class="shot"><div class="frame"><img src="./shot_guide.jpg" alt="이렇게 기록해요 안내"></div><div class="cap">첫 실행 안내</div></div>
+  </div>
+  <p style="font-size:12.5px;color:var(--muted);margin-top:8px">지도 배경은 실제 폰에서 OpenStreetMap 지도로 표시됩니다.</p>
 
   <div class="section-title">😊 감정 태그 4가지</div>
   <div class="tags">
