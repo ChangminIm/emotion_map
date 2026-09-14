@@ -59,10 +59,11 @@ a{color:inherit}
 .qr{display:flex;gap:16px;justify-content:center;margin-top:8px}
 .qr img{width:110px;height:110px;border:1px solid var(--border);border-radius:10px;background:#fff}
 
-.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px;margin-bottom:8px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 22px;margin-bottom:8px}
 .shot{text-align:center}
-.shot .frame{display:inline-block;background:#111;border-radius:26px;padding:7px;box-shadow:0 14px 32px rgba(11,45,74,.18)}
-.shot img{display:block;width:100%;max-width:200px;border-radius:20px}
+.shot .frame{display:inline-block;background:#111;border-radius:28px;padding:8px;box-shadow:0 14px 32px rgba(11,45,74,.18)}
+.shot img{display:block;width:100%;max-width:260px;border-radius:22px}
+@media(max-width:640px){.shots{grid-template-columns:repeat(2,1fr);gap:18px 12px}.shot .frame{padding:5px;border-radius:20px}.shot img{border-radius:16px}}
 .shot .cap{font-size:13px;color:var(--muted);margin-top:10px;font-weight:600}
 .tags{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:8px}
 .tag{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 18px 16px;display:flex;gap:12px;align-items:flex-start}
@@ -140,7 +141,6 @@ footer .credit{margin-top:8px;font-weight:700;color:var(--navy)}
     <div class="shot"><div class="frame"><img src="./shot_records.jpg" alt="내 기록"></div><div class="cap">내 기록 · 보내기</div></div>
     <div class="shot"><div class="frame"><img src="./shot_guide.jpg" alt="이렇게 기록해요 안내"></div><div class="cap">첫 실행 안내</div></div>
   </div>
-  <p style="font-size:12.5px;color:var(--muted);margin-top:8px">지도 배경은 실제 폰에서 OpenStreetMap 지도로 표시됩니다.</p>
 
   <div class="section-title">😊 감정 태그 4가지</div>
   <div class="tags">
