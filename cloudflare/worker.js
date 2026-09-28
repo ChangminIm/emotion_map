@@ -1,13 +1,9 @@
 // 정적 자산(cloudflare/dist/emotion_map/*)에 없는 요청만 여기로 온다.
+// APK도 정적 자산이다 — 기기별(ABI) 분리 빌드라 한 파일이 25MiB 한도 안에 든다.
+//   공주를걷다_vX.Y.Z.apk        arm64 (2018년 이후 대부분의 폰)
+//   공주를걷다_vX.Y.Z_32bit.apk  armeabi-v7a (구형 32비트 폰)
 const PREFIX = "/emotion_map";
 const CANONICAL_HOST = "changminim.com";
-
-// APK는 Worker 정적 자산 한도(25MiB)를 넘어 GitHub Release 에 둔다.
-// 페이지의 링크(./공주를걷다_v0.7.1.apk)는 그대로 두고 여기서 실제 파일로 보낸다.
-const APK = {
-  "공주를걷다_v0.7.1.apk":
-    "https://github.com/ChangminIm/emotion_map/releases/download/v0.7.1/gongju_walk_v0.7.1.apk",
-};
 const APK_LATEST = "공주를걷다_v0.7.1.apk";
 
 export default {
@@ -22,13 +18,10 @@ export default {
       return Response.redirect(`${url.origin}${PREFIX}/`, 302);
     }
 
+    // 짧은 주소 /emotion_map/apk → 최신 APK (QR·카톡 안내용)
     const rest = decodeURIComponent(url.pathname.slice(PREFIX.length)).replace(/^\/+/, "");
     if (rest === "apk" || rest === "apk/") {
-      return Response.redirect(APK[APK_LATEST], 302);
-    }
-    if (rest.endsWith(".apk")) {
-      const target = APK[rest] ?? APK[APK_LATEST];
-      return Response.redirect(target, 302);
+      return Response.redirect(`${url.origin}${PREFIX}/${encodeURIComponent(APK_LATEST)}`, 302);
     }
     return new Response("Not Found", {
       status: 404,
