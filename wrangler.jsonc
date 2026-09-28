@@ -1,0 +1,22 @@
+{
+  // 「공주를 걷다」 안내 홈페이지 — Cloudflare Worker(정적 자산) 배포 설정
+  // changminim.com 이 2026-09 Cloudflare Pages(changminim-site)로 옮겨지면서 GitHub Pages 경로가 404가 됨.
+  // 대전 연구 사이트(daejeon-school-research)와 같은 방식: 경로 라우트 + 정적 자산 Worker.
+  // 배포:  powershell -ExecutionPolicy Bypass -File cloudflare\deploy.ps1
+  // 서비스 주소: https://changminim.com/emotion_map/
+  // APK(59MB)는 정적 자산 한도(25MiB)를 넘어 GitHub Release 자산으로 두고 worker.js 가 302 로 보낸다.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "emotion-map",
+  "main": "cloudflare/worker.js",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./cloudflare/dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  },
+  "routes": [
+    { "pattern": "changminim.com/emotion_map*", "zone_name": "changminim.com" },
+    { "pattern": "www.changminim.com/emotion_map*", "zone_name": "changminim.com" }
+  ]
+}
